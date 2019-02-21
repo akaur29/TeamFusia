@@ -40,30 +40,30 @@ namespace ConsoleApp3
             catch (NullReferenceException one) { }
         }
 
-            public void Run()
-            {
-                Alst = new Village("Alst", false);
-                Schvenig = new Village("Schveing", false);
-                Wessig = new Village("Wessig", true);
-                Alst.distanceToeastVillage = 14;
-                Alst.distanceTowesttVillage = 19;
-                Alst.west = Schvenig;
-                Alst.east = Wessig;
+        public void Run()
+        {
+            Alst = new Village("Alst", false);
+            Schvenig = new Village("Schveing", false);
+            Wessig = new Village("Wessig", true);
+            Alst.distanceToeastVillage = 14;
+            Alst.distanceTowesttVillage = 19;
+            Alst.west = Schvenig;
+            Alst.east = Wessig;
 
-                Schvenig.west = null;
-                Schvenig.east = null;
+            Schvenig.west = null;
+            Schvenig.east = null;
 
-                Wessig.west = null;
-                Wessig.east = null;
-                this.Travelvillages(Alst);
-            }
-
-
+            Wessig.west = null;
+            Wessig.east = null;
+            this.Travelvillages(Alst);
         }
 
 
+    }
 
-    
+
+
+}
 
 
     class Village
@@ -82,6 +82,6 @@ namespace ConsoleApp3
         public int distanceToPreviousVillage;
         public bool isAstrildgeHere;
     }
-}
+
         
 
