@@ -63,7 +63,7 @@ namespace ConsoleApp3
 
 
 
-    }
+    
 
 
     class Village
