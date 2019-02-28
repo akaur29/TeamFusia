@@ -60,7 +60,7 @@ class CountrySide
         // Here Hugi records his travels, as any Norse Hero will do:
 
         Hugi.HugiJournal.Add(new JournalEntry(CurrentVillage.VillageName, CurrentVillage.distanceFromPreviousVillage));
-        Console.WriteLine("I am in {0}", CurrentVillage.VillageName);
+        Console.WriteLine("I am travelled to village {0}", CurrentVillage.VillageName);
 
         try
         {
@@ -68,7 +68,7 @@ class CountrySide
             {
                 Console.WriteLine("I found Dear Astrildge in {0}", CurrentVillage.VillageName);
                 Console.WriteLine("** FEELING HAPPY!!! **");
-                Console.WriteLine("Astrilde, I walked {0} vika to find you. Will you marry me?", Hugi.CalculateDistanceWalked());
+                Console.WriteLine("Astrilde, I walked {0} to kms find you. Will you marry me?", Hugi.CalculateDistanceWalked());
                 Console.ReadLine();
                 Hugi.FoundAstrilde = true;
             }
@@ -105,7 +105,7 @@ class CountrySide
     {
         try
         {
-            using (StreamReader sr = new StreamReader("user:730499/assignment/Announcement.txt"))
+            using (StreamReader sr = new StreamReader("am.txt"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -147,17 +147,3 @@ class Village
     public int distanceFromPreviousVillage;
     public bool isAstrildgeHere;
 }
-
-//Note: this is the Text that is to be outputted to the Screen at the end of the Program Run:
-//*------------------------------------------------------*
-
-//An Announcement was posted
-//in "The Viking Village Newspaper", later that week:
-
-//The Familes of Astridle Guðmundsdóttir and Hugi Ólafur
-//are Happy to announce the Marriage of their Children.
-
-//The Ceremony will take place on the third Sunnudagur of Góa
-//at the Temple of Frigga in Alst.
-
-//All are Welcome.
