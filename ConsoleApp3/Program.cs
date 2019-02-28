@@ -105,7 +105,7 @@ class CountrySide
     {
         try
         {
-            using (StreamReader sr = new StreamReader("C:/assignment/ann.txt"))
+            using (StreamReader sr = new StreamReader("user:730499/assignment/Announcement.txt"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -113,7 +113,7 @@ class CountrySide
                     Console.WriteLine(line);
                     Console.ReadLine();
                 }
-               
+
             }
         }
         catch (Exception e)
